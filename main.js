@@ -32,6 +32,35 @@ function displayResults (weather) {
 
   let weather_el = document.querySelector('.current .weather');
   weather_el.innerText = weather.weather[0].main;
+  var desc = weather.weather[0].main;
+  
+  if(desc == "Mist")
+	 document.body.style.backgroundImage = "url('img/mist.jpg')";
+else if(desc == "Clouds")
+        document.body.style.backgroundImage = "url('img/cloudy.jpg')";
+	else if(desc == "Haze")
+        document.body.style.backgroundImage = "url('img/mist.jpg')";
+	else if(desc == "Clear")
+        document.body.style.backgroundImage = "url('img/clear.jpg')";
+	else if(desc == "Smoke")
+        document.body.style.backgroundImage = "url('img/smoke.jpg')";
+	else if(desc == "Thunderstorm")
+        document.body.style.backgroundImage = "url('img/thunderstorm.jpg')";
+	else if(desc == "Snow")
+        document.body.style.backgroundImage = "url('img/snow.jpg')";
+	else if(desc == "Drizzle")
+        document.body.style.backgroundImage = "url('img/drizzle.jpg')";
+	else if(desc == "Fog")
+        document.body.style.backgroundImage = "url('img/mist.jpg')";
+	else if(desc == "Dust")
+        document.body.style.backgroundImage = "url('img/dust.jpg')";
+	else if(desc == "Sand")
+        document.body.style.backgroundImage = "url('img/dust.jpg')";
+	else if(desc == "Ash")
+        document.body.style.backgroundImage = "url('img/ash.jpg')";
+	else if(desc == "Tornado")
+        document.body.style.backgroundImage = "url('img/tornado.jpg')";	
+else document.body.style.backgroundImage = "url('img/rain.jpg')";
 
   let hilow = document.querySelector('.hi-low');
   hilow.innerText = ` Min:${Math.round(weather.main.temp_min)}°C / Max:${Math.round(weather.main.temp_max)}°C`;
